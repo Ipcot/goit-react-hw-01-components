@@ -9,10 +9,12 @@ export const theme = {
     secondary: '#05a',
     accent: '#609',
     whiteGrey: '#F5F5F5',
+    liteGrey: '#E8E8E8',
+    border: 'rgba(0, 0, 0, 0.24)',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: 'Roboto, sans-serif',
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
@@ -37,7 +39,10 @@ export const theme = {
   },
   radii: {
     none: '0',
-    normal: '4px',
+    normal: '6px',
     round: '50%',
+  },
+  shadows: {
+    normal: 'rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;',
   },
 };

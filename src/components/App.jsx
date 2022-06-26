@@ -1,5 +1,5 @@
 import { Profile } from './Profile/Profile';
-import user from 'user.json';
+import user from '../data/user.json';
 import { Box } from './Box/Box.styled';
 console.log(user);
 export const App = () => {
@@ -10,6 +10,7 @@ export const App = () => {
         username={user.username}
         tag={user.tag}
         location={user.location}
+        stats={user.stats}
       ></Profile>
     </Box>
   );
