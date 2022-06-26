@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-export const Box = ({ children }) => {
-  return <div>{children}</div>;
-};
+// export const Box = ({ children }) => {
+//   return <div>{children}</div>;
+// };
 
-Box.propTypes = {
-  children: PropTypes.node,
-};
+// Box.propTypes = {
+//   children: PropTypes.node,
+// };

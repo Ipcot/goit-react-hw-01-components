@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
-import { UserName } from './Profile.styled';
+import { UserName, ProfileImg, StyledText } from './Profile.styled';
+import { Box } from 'components/Box/Box.styled';
 
 export const Profile = ({ username, tag, location, avatar }) => {
   return (
-    <div>
-      <img src={avatar} alt="User avatar" />
+    <Box bg="whiteGrey" width="65%" p={3} m="auto">
+      <ProfileImg src={avatar} alt="User avatar" width="100px" />
       <UserName>{username}</UserName>
-      <p>{tag}</p>
-      <p>{location}</p>
-    </div>
+      <StyledText>@{tag}</StyledText>
+      <StyledText>{location}</StyledText>
+    </Box>
   );
 };
 
