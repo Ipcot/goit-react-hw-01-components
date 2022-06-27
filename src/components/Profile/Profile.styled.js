@@ -6,7 +6,7 @@ export const UserName = styled.p`
   font-family: ${p => p.theme.fonts.body};
   font-size: ${p => p.theme.fontSizes.m};
   font-weight: ${p => p.theme.fontWeights.bold};
-  padding: ${p => p.theme.space[1]}px;
+  padding: ${p => p.theme.space[2]}px;
 `;
 
 export const ProfileImg = styled.img`
@@ -17,21 +17,26 @@ export const ProfileImg = styled.img`
 `;
 
 export const StyledText = styled.p`
+  margin: ${p => p.theme.space[0]}px;
   text-align: center;
   color: ${p => p.theme.colors.text};
   font-family: ${p => p.theme.fonts.body};
   font-size: ${p => p.theme.fontSizes.s};
   font-weight: ${p => p.theme.fontWeights.normal};
-  padding: ${p => p.theme.space[1]}px;
+  padding-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const StatsLIst = styled.ul`
   margin: ${p => p.theme.space[0]}px;
   padding: ${p => p.theme.space[0]}px;
   display: flex;
+  border-left: solid ${p => p.theme.colors.border} 0.5px;
+  border-right: solid ${p => p.theme.colors.border} 0.5px;
+  border-bottom: solid ${p => p.theme.colors.border} 1px;
   border-bottom-left-radius: ${p => p.theme.radii.normal};
   border-bottom-right-radius: ${p => p.theme.radii.normal};
   background-color: ${p => p.theme.colors.liteGrey};
+  box-shadow: ${p => p.theme.shadows.normal};
 `;
 
 export const StatsItem = styled.li`

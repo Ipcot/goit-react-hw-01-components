@@ -12,19 +12,23 @@ import { Box } from 'components/Box/Box.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <Box
-      bg="whiteGrey"
-      width="65%"
-      pt={3}
-      m="auto"
-      border="none"
-      borderRadius="normal"
-      boxShadow="normal"
-    >
-      <ProfileImg src={avatar} alt="User avatar" width="100px" />
-      <UserName>{username}</UserName>
-      <StyledText>@{tag}</StyledText>
-      <StyledText>{location}</StyledText>
+    <>
+      <Box
+        bg="whiteGrey"
+        width="100%"
+        pt={3}
+        pb={4}
+        m="auto"
+        borderTop="greyBorder"
+        borderTopLeftRadius="normal"
+        borderTopRightRadius="normal"
+        boxShadow="normal"
+      >
+        <ProfileImg src={avatar} alt="User avatar" width="100px" />
+        <UserName>{username}</UserName>
+        <StyledText>@{tag}</StyledText>
+        <StyledText>{location}</StyledText>
+      </Box>
       <StatsLIst>
         <StatsItem>
           <StatsName>Followers</StatsName>
@@ -39,7 +43,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           <StatsInfo>{stats.likes}</StatsInfo>
         </StatsItem>
       </StatsLIst>
-    </Box>
+    </>
   );
 };
 
@@ -48,4 +52,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };

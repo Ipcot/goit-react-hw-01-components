@@ -33,9 +33,11 @@ export const theme = {
     body: 1.5,
     heading: 1.125,
   },
+
   borders: {
     none: 'none',
     normal: '1px solid',
+    greyBorder: 'solid rgba(0, 0, 0, 0.24) 1px',
   },
   radii: {
     none: '0',
