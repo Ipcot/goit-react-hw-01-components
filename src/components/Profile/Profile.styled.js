@@ -58,7 +58,6 @@ export const StatsName = styled.span`
   font-family: ${p => p.theme.fonts.body};
   font-size: ${p => p.theme.fontSizes.xs};
   font-weight: ${p => p.theme.fontWeights.normal};
-  /* display: block; */
 `;
 
 export const StatsInfo = styled.span`
