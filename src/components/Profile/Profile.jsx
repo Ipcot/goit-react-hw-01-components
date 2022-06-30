@@ -10,7 +10,13 @@ import {
 } from './Profile.styled';
 import { Box } from 'components/Box/Box.styled';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
   return (
     <>
       <Box
@@ -32,15 +38,15 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       <StatsLIst>
         <StatsItem>
           <StatsName>Followers</StatsName>
-          <StatsInfo>{stats.followers}</StatsInfo>
+          <StatsInfo>{followers}</StatsInfo>
         </StatsItem>
         <StatsItem>
           <StatsName>Views</StatsName>
-          <StatsInfo>{stats.views}</StatsInfo>
+          <StatsInfo>{views}</StatsInfo>
         </StatsItem>
         <StatsItem>
           <StatsName>Likes</StatsName>
-          <StatsInfo>{stats.likes}</StatsInfo>
+          <StatsInfo>{likes}</StatsInfo>
         </StatsItem>
       </StatsLIst>
     </>

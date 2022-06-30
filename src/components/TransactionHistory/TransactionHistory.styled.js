@@ -6,6 +6,7 @@ export const Table = styled.table`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: ${p => p.theme.space[4]}px;
+  overflow: hidden;
   background-color: ${p => p.theme.colors.table};
   border-collapse: collapse;
 

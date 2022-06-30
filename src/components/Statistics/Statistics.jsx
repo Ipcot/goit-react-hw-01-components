@@ -15,6 +15,7 @@ export const Statistics = ({ title, stats }) => {
       mr="auto"
       ml="auto"
       bg="background"
+      overflow="hidden"
       borderRadius="normal"
       boxShadow="normal"
       as="section"
@@ -30,7 +31,10 @@ export const Statistics = ({ title, stats }) => {
       >
         {stats.map(({ id, label, percentage }) => {
           return (
-            <StatisticItem key={id}>
+            <StatisticItem
+              key={id}
+              style={{ backgroundColor: `${getRandomHexColor()}` }}
+            >
               <StatisticInfo>{label}</StatisticInfo>
               <StatisticData>{percentage}%</StatisticData>
             </StatisticItem>
@@ -51,3 +55,7 @@ Statistics.propTypes = {
     }).isRequired
   ).isRequired,
 };
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

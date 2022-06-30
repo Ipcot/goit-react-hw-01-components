@@ -16,19 +16,6 @@ export const StatisticItem = styled.li`
   display: flex;
   flex-direction: column;
   width: calc(100% / 5);
-
-  + li {
-    background-color: ${getRandomHexColor()};
-  }
-  + li + li {
-    background-color: ${getRandomHexColor()};
-  }
-  + li + li + li {
-    background-color: ${getRandomHexColor()};
-  }
-  + li + li + li + li {
-    background-color: ${getRandomHexColor()};
-  }
 `;
 
 export const StatisticInfo = styled.span`
@@ -50,7 +37,3 @@ export const StatisticData = styled.span`
   font-size: ${p => p.theme.fontSizes.m};
   font-weight: ${p => p.theme.fontWeights.normal};
 `;
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
